@@ -8,6 +8,7 @@
   --yellow: #fbde3f;
   --green: #1ec876;
   --blue: #007bff;
+  --black: #3e4542;
 
   /* font sizes */
   --form-size: 15px;
@@ -30,7 +31,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 .form {
@@ -43,6 +45,19 @@ body {
 
 .form > span {
   align-self: flex-start;
+}
+
+.form > span:hover {
+  cursor: pointer;
+}
+
+.form > span {
+  font-size: 15px;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: var(--black);
 }
 
 @media (min-width: 768px) {

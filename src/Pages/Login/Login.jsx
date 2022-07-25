@@ -1,11 +1,11 @@
 import React from "react";
 import "./Login.css";
-import RegisterForm from "../../Components/RegisterForm";
+import { LoginForm } from "../../Components";
 
 const Login = () => {
   return (
     <div className="container">
-      <RegisterForm />
+      <LoginForm />
     </div>
   );
 };
