@@ -4,6 +4,7 @@
   border-radius: 8px;
   font-size: var(--form-size);
   height: 35px;
+  color: var(--black);
 }
 
 .input-required {

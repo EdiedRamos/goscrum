@@ -5,11 +5,21 @@ import { authData } from "../../Services/Apis";
 import formik from "./Formik";
 import { Link } from "react-router-dom";
 
+import { v4 as uuidv4 } from "uuid";
+
+const uuid = uuidv4();
+
 const RegisterForm = () => {
   const [data, setData] = useState({});
   const [team, setTeam] = useState(false);
 
-  const { handleChange, handleSubmit, values, errors } = formik();
+  const { handleChange, handleSubmit, values, errors, setFieldValue } =
+    formik();
+
+  useEffect(() => {
+    if (!team) setFieldValue("teamID", uuid);
+    else setFieldValue("teamID", "");
+  }, [team]);
 
   useEffect(() => {
     authData().then((data) => setData(data));
@@ -18,15 +28,15 @@ const RegisterForm = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <Heading content="Registro" level={3} />
-      <Label content="Nombre de usuario" htmlFor="username" />
+      <Label content="Nombre de usuario" htmlFor="userName" />
       <Input
         type="text"
-        name="username"
+        name="userName"
         change={handleChange}
-        value={values.username}
-        className={errors.username && "input-required"}
+        value={values.userName}
+        className={errors.userName && "input-required"}
       />
-      <Required message={errors.username} />
+      <Required message={errors.userName} />
       <Label content="Contraseña" htmlFor="password" />
       <Input
         type="text"
@@ -53,33 +63,33 @@ const RegisterForm = () => {
         <>
           <Label
             content="Por favor, introduce el identificador de equipo"
-            htmlFor="teamId"
+            htmlFor="teamID"
           />
           <Input
             type="text"
-            name="teamId"
+            name="teamID"
             change={handleChange}
-            value={values.teamId}
-            className={errors.teamId && "input-required"}
+            value={values.teamID}
+            className={errors.teamID && "input-required"}
           />
-          <Required message={errors.teamId} />
+          <Required message={errors.teamID} />
         </>
       )}
-      <Label content="Rol" htmlFor="rol" />
+      <Label content="Rol" htmlFor="role" />
       <Select
-        id="rol"
+        id="role"
         data={data?.Rol}
         change={handleChange}
-        value={values.rol}
+        value={values.role}
       />
-      <Label content="Continente" htmlFor="continente" />
+      <Label content="Continente" htmlFor="continent" />
       <Select
-        id="continente"
+        id="continent"
         data={data?.continente}
         change={handleChange}
-        value={values.continente}
+        value={values.continent}
       />
-      {values?.continente === "America" && (
+      {values?.continent === "America" && (
         <>
           <Label content="Región" htmlFor="region" />
           <Select

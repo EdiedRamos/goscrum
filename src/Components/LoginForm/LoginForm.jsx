@@ -7,14 +7,14 @@ const LoginForm = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <Heading content="Iniciar sesión" level={3} />
-      <Label content="Nombre de usuario" htmlFor="username" />
+      <Label content="Nombre de usuario" htmlFor="userName" />
       <Input
-        name="username"
+        name="userName"
         change={handleChange}
-        value={values.username}
-        className={errors.username && "input-required"}
+        value={values.userName}
+        className={errors.userName && "input-required"}
       />
-      <Required message={errors.username} />
+      <Required message={errors.userName} />
       <Label content="Contraseña" htmlFor="password" />
       <Input
         name="password"
