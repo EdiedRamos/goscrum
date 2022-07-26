@@ -6,6 +6,11 @@ import Select from "./Select";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Header from "./Header";
+import Logo from "./Logo";
+import Donate from "./Donate";
+import TaskCounter from "./TaskCounter";
+import UserName from "./UserName";
+import Logout from "./Logout";
 
 export {
   Input,
@@ -16,4 +21,9 @@ export {
   Heading,
   Select,
   Header,
+  Logo,
+  Donate,
+  TaskCounter,
+  UserName,
+  Logout,
 };
