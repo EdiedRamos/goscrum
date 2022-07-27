@@ -3,7 +3,7 @@ import { Logo, Donate, TaskCounter, UserName, Logout } from "../";
 import "./Header.css";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   return (
     <header className="header">

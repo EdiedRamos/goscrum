@@ -17,8 +17,7 @@ const RegisterForm = () => {
     formik();
 
   useEffect(() => {
-    if (!team) setFieldValue("teamID", uuid);
-    else setFieldValue("teamID", "");
+    setFieldValue("teamID", team ? "" : uuid);
   }, [team]);
 
   useEffect(() => {

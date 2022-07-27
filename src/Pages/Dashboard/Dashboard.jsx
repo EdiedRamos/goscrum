@@ -1,7 +1,12 @@
-import { Header } from "../../Components";
+import { Header, TaskForm } from "../../Components";
 
 const Dashboard = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <TaskForm />
+    </>
+  );
 };
 
 export default Dashboard;

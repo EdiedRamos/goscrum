@@ -1,0 +1,34 @@
+.task-form-inputs {
+  display: grid;
+  padding: 5px;
+}
+
+.task-form-inputs > textarea {
+  height: 100px;
+  font-size: var(--form-size);
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  resize: none;
+}
+
+.task-form-submit-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .task-form-inputs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .task-form-inputs > textarea {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .task-form-submit-container {
+    flex-direction: row;
+  }
+}

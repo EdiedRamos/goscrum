@@ -11,6 +11,7 @@ import Donate from "./Donate";
 import TaskCounter from "./TaskCounter";
 import UserName from "./UserName";
 import Logout from "./Logout";
+import TaskForm from "./TaskForm";
 
 export {
   Input,
@@ -26,4 +27,5 @@ export {
   TaskCounter,
   UserName,
   Logout,
+  TaskForm,
 };
