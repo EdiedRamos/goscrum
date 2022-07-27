@@ -1,0 +1,11 @@
+.donate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  text-decoration: none;
+  border-radius: 8px;
+  color: white;
+  padding: 5px 14px;
+  height: 25px;
+}

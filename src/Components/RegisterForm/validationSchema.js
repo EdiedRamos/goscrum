@@ -11,7 +11,7 @@ const validationSchema = yup.object().shape({
     .string()
     .min(6, "Contraseña muy corta")
     .matches(/\d/, "Debe contener al menos 1 número")
-    .matches(/[A-Z]/, "Debe contener al menos 1 letra mayúscula")
+    .matches(/[A-ZÑ]/, "Debe contener al menos 1 letra mayúscula")
     .required(required),
   email: yup.string().required(required),
   teamID: yup.string().uuid("El identificador es inválido").required(required),
