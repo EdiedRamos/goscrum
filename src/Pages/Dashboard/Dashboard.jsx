@@ -1,10 +1,11 @@
-import { Header, TaskForm } from "../../Components";
+import { Header, TaskForm, Tasks } from "../../Components";
 
 const Dashboard = () => {
   return (
     <>
       <Header />
       <TaskForm />
+      <Tasks />
     </>
   );
 };

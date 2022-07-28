@@ -1,5 +1,4 @@
 import "./Select.css";
-
 const Select = (props) => {
   return (
     <select

@@ -1,0 +1,5 @@
+.task-list-container {
+  border: 1px solid var(--black);
+  background-color: var(--orange);
+  margin: 5px 0;
+}

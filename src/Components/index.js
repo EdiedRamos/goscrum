@@ -12,6 +12,12 @@ import TaskCounter from "./TaskCounter";
 import UserName from "./UserName";
 import Logout from "./Logout";
 import TaskForm from "./TaskForm";
+import Tasks from "./Tasks";
+import TaskFilter from "./TaskFilter";
+import TaskSearch from "./TaskSearch";
+import TaskPriority from "./TaskPriority";
+import TaskList from "./TaskList";
+import TaskCard from "./TaskCard";
 
 export {
   Input,
@@ -28,4 +34,10 @@ export {
   UserName,
   Logout,
   TaskForm,
+  Tasks,
+  TaskFilter,
+  TaskSearch,
+  TaskPriority,
+  TaskList,
+  TaskCard,
 };

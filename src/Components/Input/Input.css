@@ -7,6 +7,10 @@
   color: var(--black);
 }
 
+.input[type="radio"] {
+  height: auto;
+}
+
 .input-required {
   border-color: var(--orange);
 }

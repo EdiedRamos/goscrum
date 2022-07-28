@@ -1,8 +1,11 @@
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
   box-shadow: 0 2px 5px gray;
+  background-color: var(--white);
 }
 
 .left {
@@ -29,6 +32,7 @@
   border-radius: 8px;
   color: white;
   cursor: pointer;
+  height: 25px;
 }
 
 .right > * {

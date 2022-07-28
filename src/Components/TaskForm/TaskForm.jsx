@@ -7,12 +7,14 @@ const TaskForm = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    taskData().then((res) => setData(res.result));
+    taskData().then((res) => {
+      setData(res.result);
+    });
   }, []);
 
   return (
     <>
-      <Heading content="Crear terea" level={3} />
+      <Heading content="Crear tarea" level={3} />
       <p>Crea tus tareas</p>
       <div className="task-form-inputs">
         <Input type="text" name="title" placeholder="Título" />
