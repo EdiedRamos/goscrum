@@ -1,3 +1,8 @@
+.task-form-container {
+  padding: 5px;
+  margin: 5px;
+}
+
 .task-form-inputs {
   display: grid;
   padding: 5px;

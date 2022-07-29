@@ -11,10 +11,11 @@ const TaskCard = (props) => {
       <p>{props.time}</p>
       <p>{props.author}</p>
       <div className="state-priority-container">
-        <Heading content={props.state} level={5} />
-        <Heading content={props.priority} level={5} />
+        <p className="finished">{props.state}</p>
+        <p className="medium">{props.priority}</p>
       </div>
       <p>{props.content}</p>
+      <button className="see-more active">Ver más</button>
     </div>
   );
 };

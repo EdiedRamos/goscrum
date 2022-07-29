@@ -1,5 +1,7 @@
+import "./Logout.css";
+
 const Logout = () => {
-  return <button>X</button>;
+  return <button className="logout">X</button>;
 };
 
 export default Logout;

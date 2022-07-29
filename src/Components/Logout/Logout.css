@@ -1,0 +1,16 @@
+.logout {
+  background-color: var(--orange);
+  color: white;
+  cursor: pointer;
+  height: 25px;
+  font-weight: bold;
+  border: 1px solid var(--orange);
+  border-radius: 50%;
+}
+
+.logout:hover {
+  background-color: white;
+  color: var(--orange);
+  transition: all 0.4s;
+  border-radius: 8px;
+}

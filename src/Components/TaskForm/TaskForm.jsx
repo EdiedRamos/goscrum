@@ -13,7 +13,7 @@ const TaskForm = () => {
   }, []);
 
   return (
-    <div>
+    <div className="task-form-container">
       <Heading content="Crear tarea" level={3} />
       <p>Crea tus tareas</p>
       <div className="task-form-inputs">

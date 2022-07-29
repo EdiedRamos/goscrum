@@ -25,14 +25,18 @@
   justify-content: flex-end;
 }
 
-.toggle,
-.right > button {
+.toggle {
   background-color: var(--orange);
-  border: none;
+  border: 1px solid var(--orange);
   border-radius: 8px;
   color: white;
   cursor: pointer;
   height: 25px;
+}
+
+.toggle:hover {
+  background-color: white;
+  color: var(--orange);
 }
 
 .right > * {

@@ -4,8 +4,42 @@
   justify-content: center;
   background-color: var(--orange);
   text-decoration: none;
+  border: 1px solid var(--orange);
   border-radius: 8px;
   color: white;
   padding: 5px 14px;
   height: 25px;
+}
+
+.donate:hover {
+  animation-name: happy;
+  text-shadow: 0 0 5px var(--orange);
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes happy {
+  0% {
+    background-image: linear-gradient(var(--orange), var(--white));
+  }
+  25% {
+    background-image: linear-gradient(
+      var(--white),
+      var(--orange),
+      var(--white)
+    );
+  }
+  50% {
+    background-image: linear-gradient(var(--white), var(--orange));
+  }
+  75% {
+    background-image: linear-gradient(
+      var(--white),
+      var(--orange),
+      var(--white)
+    );
+  }
+  100% {
+    background-image: linear-gradient(var(--orange), var(--white));
+  }
 }
