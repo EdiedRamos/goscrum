@@ -1,10 +1,10 @@
-import { TaskCard } from "../";
+import { Heading, TaskCard } from "../";
 import "./TaskList.css";
 
 const TaskList = (props) => {
   return (
     <div className="task-list-container">
-      <p>{props.state}</p>
+      <Heading content={props.state} level={3} />
       {props?.data?.map((task) => (
         <TaskCard key={task._id} {...task} />
       ))}

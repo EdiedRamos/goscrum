@@ -1,0 +1,4 @@
+.task-filter-container > * {
+  margin: 0 5px;
+  font-size: var(--form-size);
+}

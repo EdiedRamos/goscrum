@@ -1,5 +1,39 @@
 .task-card {
-  border: 1px solid var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
   padding: 10px;
-  background-color: var(--black);
+  margin: 5px 0;
+}
+
+.task-card p {
+  /* font-size: var(--font-size); */
+  font-size: 13px;
+}
+
+.header-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-card-container > button {
+  display: flex;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.header-card-container > button:hover {
+  cursor: pointer;
+  background-color: var(--gray-200);
+  color: var(--black);
+  transition: background-color 0.4s;
+}
+
+.state-priority-container {
+  display: flex;
+}
+
+.state-priority-container > *:last-child {
+  margin-left: 10px;
 }

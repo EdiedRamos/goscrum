@@ -1,0 +1,31 @@
+.tasks-container {
+  border: 1px solid var(--gray);
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+
+.task-options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-options-container > * {
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .task-options-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .task-options-container > * {
+    align-self: center;
+  }
+
+  .task-group-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}

@@ -13,19 +13,28 @@ const TaskForm = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Heading content="Crear tarea" level={3} />
       <p>Crea tus tareas</p>
       <div className="task-form-inputs">
         <Input type="text" name="title" placeholder="Título" />
-        <Select data={data?.importance} />
-        <Select data={data?.status} />
+        <Select
+          data={data?.status && ["Seleccionar un estado", ...data?.status]}
+        />
+        <Select
+          data={
+            data?.importance && [
+              "Seleccionar una prioridad",
+              ...data?.importance,
+            ]
+          }
+        />
         <textarea placeholder="Descripción" />
       </div>
       <div className="task-form-submit-container">
         <Input type="submit" className="submit" value="Crear" />
       </div>
-    </>
+    </div>
   );
 };
 

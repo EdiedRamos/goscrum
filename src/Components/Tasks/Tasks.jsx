@@ -45,15 +45,19 @@ const Tasks = () => {
     },
   ];
   return (
-    <>
+    <div className="tasks-container">
       <Heading content="Mis tareas" level={3} />
-      <TaskFilter />
-      <TaskSearch />
-      <TaskPriority />
-      <TaskList state="Nuevas" data={fakeData} />
-      <TaskList state="En proceso" data={fakeData} />
-      <TaskList state="Finalizadas" data={fakeData} />
-    </>
+      <div className="task-options-container">
+        <TaskFilter />
+        <TaskSearch />
+        <TaskPriority />
+      </div>
+      <div className="task-group-container">
+        <TaskList state="Nuevas" data={fakeData} />
+        <TaskList state="En proceso" data={fakeData} />
+        <TaskList state="Finalizadas" data={fakeData} />
+      </div>
+    </div>
   );
 };
 
