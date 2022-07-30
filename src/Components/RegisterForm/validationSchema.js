@@ -14,7 +14,6 @@ const validationSchema = yup.object().shape({
     .matches(/[A-ZÑ]/, "Debe contener al menos 1 letra mayúscula")
     .required(required),
   email: yup.string().required(required),
-  teamID: yup.string().uuid("El identificador es inválido").required(required),
 });
 
 export default validationSchema;

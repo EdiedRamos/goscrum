@@ -3,9 +3,22 @@ import validationSchema from "./validationSchema";
 import { toast } from "react-toastify";
 import { authRegister } from "../../Services/Apis";
 import { useNavigate } from "react-router-dom";
+import { validate as uuidValidate, v4 as uuid } from "uuid";
 
-const Formik = () => {
+const Formik = (hasTeam) => {
   const navigate = useNavigate();
+
+  const validate = ({ teamID }) => {
+    const errors = {};
+    if (hasTeam) {
+      if (!teamID.trim().length) {
+        errors.teamID = "*Campo obligatorio";
+      } else if (!uuidValidate(teamID)) {
+        errors.teamID = "El identificador es inválido";
+      }
+    }
+    return errors;
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -18,14 +31,16 @@ const Formik = () => {
       region: "Otro",
     },
     validationSchema,
+    validate,
     onSubmit: (values) => {
-      console.log("formik", values);
-      authRegister({ user: values }).then((res) => {
+      authRegister({
+        user: { ...values, teamID: hasTeam ? values.teamID : uuid() },
+      }).then((res) => {
         const { status_code } = res;
         if (status_code === 201) {
           toast(`${values.userName} has sido registrado`);
           navigate("/", { replace: true });
-        } else toast.error("Nombre de usuario o email ya registrados");
+        } else toast.error("Email ya registrado");
       });
     },
   });

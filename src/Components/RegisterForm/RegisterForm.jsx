@@ -5,20 +5,11 @@ import { authData } from "../../Services/Apis";
 import formik from "./Formik";
 import { Link } from "react-router-dom";
 
-import { v4 as uuidv4 } from "uuid";
-
-const uuid = uuidv4();
-
 const RegisterForm = () => {
   const [data, setData] = useState({});
   const [team, setTeam] = useState(false);
 
-  const { handleChange, handleSubmit, values, errors, setFieldValue } =
-    formik();
-
-  useEffect(() => {
-    setFieldValue("teamID", team ? "" : uuid);
-  }, [team]);
+  const { handleChange, handleSubmit, values, errors } = formik(team);
 
   useEffect(() => {
     authData().then((data) => setData(data));
