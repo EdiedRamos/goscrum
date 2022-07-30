@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { Login, Register, Dashboard } from "../Pages";
+import { Login, Register, Dashboard, NotFound } from "../Pages";
 
 const logged = false;
 
@@ -40,7 +40,7 @@ const AppRouter = () => {
             </Public>
           }
         />
-        <Route path="*" element={<p>🔍Ruta no administrada🔎</p>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,10 @@
+.title {
+  font-size: 2rem;
+  background-color: var(--orange);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom: 5px solid var(--blue);
+  color: var(--white);
+}
