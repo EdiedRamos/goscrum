@@ -6,14 +6,16 @@
 
 :root {
   /* colors */
+  --red: #d7263d;
   --orange: #ff452b;
   --gray: #e9e9e9;
   --gray-200: #c4c4c4;
   --white: #fcfcfc;
-  --yellow: #fbde3f;
+  --yellow: #db9e06;
   --green: #1ec876;
   --blue: #007bff;
   --black: #3e4542;
+  --black-200: #47454a;
 
   /* font sizes */
   --form-size: 15px;

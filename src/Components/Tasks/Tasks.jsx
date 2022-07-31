@@ -5,7 +5,7 @@ const Tasks = () => {
   const fakeData = [
     {
       _id: "62c613927dc9787347780034",
-      title: "Radiohead",
+      title: "Título 1",
       time: "7/3/2022, 01:33:20 hs",
       author: "user3",
       state: "new",
@@ -15,7 +15,7 @@ const Tasks = () => {
     },
     {
       _id: "62c613927dc9787347780054",
-      title: "Radiohead",
+      title: "Título 2",
       time: "7/3/2022, 01:33:20 hs",
       author: "user3",
       state: "new",
@@ -25,7 +25,7 @@ const Tasks = () => {
     },
     {
       _id: "62c613927dc9787347780035",
-      title: "Radiohead",
+      title: "Título 3",
       time: "7/3/2022, 01:33:20 hs",
       author: "user3",
       state: "new",
@@ -35,13 +35,22 @@ const Tasks = () => {
     },
     {
       _id: "62c613927dc9787347780036",
-      title: "Radiohead",
+      title: "Título 4",
       time: "7/3/2022, 01:33:20 hs",
       author: "user3",
       state: "new",
       priority: "low",
       content:
         "Esto es un contenido creado para que esta card tenga algo para mostrar, considere que esto no debe tener un sentido tanto por tanto de lo tanto del cuento de la abuta del viejo oste pero ahora quiero speking english pero ya me canse",
+    },
+    {
+      _id: "62c613927dc9787347780037",
+      title: "Título 5",
+      time: "7/3/2022, 01:33:20 hs",
+      author: "user3",
+      state: "new",
+      priority: "low",
+      content: "Este es un contenido",
     },
   ];
   return (

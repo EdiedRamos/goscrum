@@ -1,14 +1,14 @@
 .task-card {
   border-radius: var(--border-radius);
-  border: 1px solid var(--gray-200);
+  border: 2px solid var(--gray-200);
   padding: 10px;
   margin: 5px 0;
-  background-color: var(--gray);
+  /* background-color: var(--gray); */
 }
 
 .task-card p {
-  /* font-size: var(--font-size); */
   font-size: 13px;
+  margin: 3px 0;
 }
 
 .header-card-container {
@@ -18,18 +18,16 @@
 
 .header-card-container > button {
   display: flex;
-  border-radius: 50%;
+  border-radius: var(--border-radius);
   border: none;
-  background-color: var(--orange);
+  background-color: var(--red);
   color: var(--white);
   user-select: none;
 }
 
 .header-card-container > button:hover {
   cursor: pointer;
-  background-color: var(--gray-200);
-  color: var(--black);
-  transition: background-color 0.4s;
+  opacity: 0.9;
 }
 
 .state-priority-container {
@@ -61,7 +59,7 @@
 .in-progress,
 .medium {
   background-color: var(--yellow);
-  color: black;
+  /* color: var(--black); */
 }
 
 .finished {
@@ -73,22 +71,15 @@
 }
 
 .see-more {
-  background-color: var(--orange);
-  border: 1px solid var(--orange);
+  background-color: var(--black);
   border-radius: var(--border-radius);
+  border: 1px solid var(--black);
   color: var(--white);
-  padding: 2px 4px;
+  padding: 2px 6px;
   margin-top: 5px;
-  display: none;
 }
 
 .see-more:hover {
   cursor: pointer;
-  background-color: var(--gray);
-  color: var(--orange);
-  transition: background-color 0.4s;
-}
-
-.active {
-  display: inline-block;
+  opacity: 0.9;
 }

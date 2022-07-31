@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { Login, Register, Dashboard, NotFound } from "../Pages";
 
-const logged = false;
+const logged = true;
 
 const Private = ({ logged, children }) => {
   return !logged ? <Navigate to="/login" replace /> : children;
