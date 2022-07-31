@@ -12,10 +12,12 @@
   --gray-200: #c4c4c4;
   --white: #fcfcfc;
   --yellow: #db9e06;
+  --light-yellow: #fbf8c5;
   --green: #1ec876;
   --blue: #007bff;
   --black: #3e4542;
   --black-200: #47454a;
+  --dark-blue: #56667a;
 
   /* font sizes */
   --form-size: 15px;
