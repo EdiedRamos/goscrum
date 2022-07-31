@@ -8,6 +8,7 @@
   color: white;
   padding: 5px 14px;
   height: 25px;
+  border: 2px solid var(--gray);
 }
 
 .donate:hover {

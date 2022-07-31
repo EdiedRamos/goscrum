@@ -18,6 +18,7 @@ import TaskSearch from "./TaskSearch";
 import TaskPriority from "./TaskPriority";
 import TaskList from "./TaskList";
 import TaskCard from "./TaskCard";
+import TaskCardText from "./TaskCardText";
 
 export {
   Input,
@@ -40,4 +41,5 @@ export {
   TaskPriority,
   TaskList,
   TaskCard,
+  TaskCardText,
 };

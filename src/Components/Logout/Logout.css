@@ -1,11 +1,11 @@
 .logout {
   background-color: var(--orange);
-  color: white;
+  color: var(--white);
   cursor: pointer;
   height: 25px;
   font-weight: bold;
   border: 1px solid var(--orange);
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .logout:hover {

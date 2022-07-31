@@ -1,0 +1,6 @@
+.task-counter {
+  background-color: var(--gray);
+  padding: 3px;
+  user-select: none;
+  border-radius: var(--border-radius);
+}
