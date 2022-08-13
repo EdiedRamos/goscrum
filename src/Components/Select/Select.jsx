@@ -8,7 +8,12 @@ const Select = (props) => {
       value={props.value}
     >
       {props?.data?.map((value) => (
-        <option key={value}>{value}</option>
+        <option
+          key={value}
+          value={value.startsWith("Seleccionar") ? "" : value}
+        >
+          {value}
+        </option>
       ))}
     </select>
   );
