@@ -39,7 +39,7 @@ const Formik = (hasTeam) => {
         const { status_code } = res;
         if (status_code === 201) {
           toast(`${values.userName} has sido registrado`);
-          navigate("/", { replace: true });
+          navigate("/login", { replace: true });
         } else toast.error("Email ya registrado");
       });
     },
