@@ -12,7 +12,7 @@ const Formik = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      console.table(values);
     },
   });
 

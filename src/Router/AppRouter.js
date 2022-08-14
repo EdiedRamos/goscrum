@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { Login, Register, Dashboard, NotFound } from "../Pages";
 
-const logged = true;
+import { useSelector } from "react-redux";
 
 const Private = ({ logged, children }) => {
   return !logged ? <Navigate to="/login" replace /> : children;
@@ -13,6 +13,7 @@ const Public = ({ logged, children }) => {
 };
 
 const AppRouter = () => {
+  const logged = useSelector((store) => store.sesionReducer.loggedIn);
   return (
     <BrowserRouter>
       <Routes>
