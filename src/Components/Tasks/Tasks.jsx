@@ -4,7 +4,7 @@ import { Heading, TaskFilter, TaskSearch, TaskPriority, TaskList } from "../";
 import "./Tasks.css";
 
 const Tasks = () => {
-  const tasks = useSelector((store) => store.tasksReducer);
+  const tasks = useSelector((store) => store.tasksReducer.list);
 
   return (
     <div className="tasks-container">

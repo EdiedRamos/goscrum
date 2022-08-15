@@ -1,7 +1,9 @@
 import "./TaskCounter.css";
+import { useSelector } from "react-redux";
 
-const TaskCounter = (props) => {
-  return <p className="task-counter">Tareas creadas: {props.quantity}</p>;
+const TaskCounter = () => {
+  const quantity = useSelector((store) => store.tasksReducer.total);
+  return <p className="task-counter">Tareas creadas: {quantity}</p>;
 };
 
 export default TaskCounter;
