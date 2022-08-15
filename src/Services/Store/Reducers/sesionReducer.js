@@ -9,12 +9,15 @@ const sesionReducer = (state = initialState, action) => {
     case LOGIN:
       localStorage.setItem("userName", action.payload.userName);
       localStorage.setItem("token", action.payload.token);
+      localStorage.setItem("userId", action.payload.userId);
+
       return {
         loggedIn: true,
       };
     case LOGOUT:
       localStorage.removeItem("token");
       localStorage.removeItem("userName");
+      localStorage.removeItem("userId");
       return {
         loggedIn: false,
       };

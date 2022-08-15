@@ -1,11 +1,12 @@
 import { LOGIN, LOGOUT } from "../Constants/sesionConstants";
 
-export const loginAction = (token, userName) => {
+export const loginAction = (token, userName, userId) => {
   return {
     type: LOGIN,
     payload: {
       token,
       userName,
+      userId,
     },
   };
 };

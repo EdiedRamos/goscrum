@@ -20,12 +20,17 @@ const Formik = () => {
     validationSchema,
     onSubmit: (values) => {
       authLogin(values).then((res) => {
-        console.log("res", res);
         const { status_code } = res;
         if (status_code === 404) toast.error("Nombre de usuario no encontrado");
         else if (status_code === 401) toast.warn("Contraseña incorrecta");
         else if (status_code === 200) {
-          dispatch(loginAction(res.result.token, values.userName));
+          dispatch(
+            loginAction(
+              res.result.token,
+              values.userName,
+              res.result.user["_id"]
+            )
+          );
           toast.success(`Bienvenido ${values.userName}`);
           navigate("/", { replace: true });
         }

@@ -2,6 +2,7 @@ import {
   ADD_TASK,
   REMOVE_TASK,
   SET_ALL_TASKS,
+  SEARCH_BY_OWNER,
 } from "../Constants/tasksConstants";
 
 import { taskPost, taskGet, taskDelete } from "../../Apis";
@@ -21,7 +22,7 @@ export const addTask = (task) => {
   };
 };
 
-export const getAllTasks = () => {
+export const setAllTasks = () => {
   return (dispatch) => {
     taskGet().then((res) => {
       dispatch({
@@ -46,5 +47,14 @@ export const removeTask = (taskId) => {
         });
       }
     });
+  };
+};
+
+export const searchByOwner = (userId = null) => {
+  return {
+    type: SEARCH_BY_OWNER,
+    payload: {
+      userId,
+    },
   };
 };

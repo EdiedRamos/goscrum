@@ -17,6 +17,4 @@ const composeEnhancers =
 
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
-store.dispatch(getAllTasks());
-
 export default store;
