@@ -18,14 +18,17 @@ const Tasks = () => {
         <TaskList
           status="Nuevas"
           data={tasks.filter((task) => task.status === "NEW")}
+          status_css={"new"}
         />
         <TaskList
           status="En proceso"
           data={tasks.filter((task) => task.status === "IN PROGRESS")}
+          status_css={"in-progress"}
         />
         <TaskList
           status="Finalizadas"
           data={tasks.filter((task) => task.status === "FINISHED")}
+          status_css={"finished"}
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ const TaskList = (props) => {
     <div className="task-list-container">
       <Heading content={props.status} level={3} />
       {props?.data?.map((task) => (
-        <TaskCard key={task._id} {...task} />
+        <TaskCard key={task._id} {...task} status_css={props.status_css} />
       ))}
     </div>
   );

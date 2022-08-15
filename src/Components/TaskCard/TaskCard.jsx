@@ -15,8 +15,8 @@ const TaskCard = (props) => {
       <p>{props.createAt}</p>
       <p>{props.user.userName}</p>
       <div className="state-priority-container">
-        <p className="finished">{props.status}</p>
-        <p className="medium">{props.importance}</p>
+        <p className={props.status_css}>{props.status}</p>
+        <p className={props.importance.toLowerCase()}>{props.importance}</p>
       </div>
       <TaskCardText content={props.description} />
     </div>
