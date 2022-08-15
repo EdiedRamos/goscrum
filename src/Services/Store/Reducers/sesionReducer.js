@@ -1,10 +1,10 @@
 import { LOGIN, LOGOUT } from "../Constants/sesionConstants";
 
 const initialState = {
-  loggedIn: localStorage.getItem("token"),
+  loggedIn: localStorage.getItem("token") ? true : false,
 };
 
-export const sesionReducer = (state = initialState, action) => {
+const sesionReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN:
       localStorage.setItem("token", action.payload.token);
@@ -20,3 +20,5 @@ export const sesionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default sesionReducer;

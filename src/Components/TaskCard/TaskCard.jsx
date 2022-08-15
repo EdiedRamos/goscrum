@@ -8,13 +8,13 @@ const TaskCard = (props) => {
         <Heading content={props.title} level={4} />
         <button>x</button>
       </div>
-      <p>{props.time}</p>
-      <p>{props.author}</p>
+      <p>{props.createAt}</p>
+      <p>{props.user.userName}</p>
       <div className="state-priority-container">
-        <p className="finished">{props.state}</p>
-        <p className="medium">{props.priority}</p>
+        <p className="finished">{props.status}</p>
+        <p className="medium">{props.importance}</p>
       </div>
-      <TaskCardText content={props.content} />
+      <TaskCardText content={props.description} />
     </div>
   );
 };

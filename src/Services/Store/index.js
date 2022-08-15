@@ -1,10 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
-import { sesionReducer } from "./Reducers/sesionReducer";
+import { sesionReducer, tasksReducer } from "./Reducers/";
+
+import { getAllTasks } from "./Actions/tasksActions";
 
 const reducers = combineReducers({
   sesionReducer,
+  tasksReducer,
 });
 
 const composeEnhancers =
@@ -13,5 +16,7 @@ const composeEnhancers =
   compose;
 
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+
+store.dispatch(getAllTasks());
 
 export default store;

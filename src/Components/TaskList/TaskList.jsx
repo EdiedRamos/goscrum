@@ -4,7 +4,7 @@ import "./TaskList.css";
 const TaskList = (props) => {
   return (
     <div className="task-list-container">
-      <Heading content={props.state} level={3} />
+      <Heading content={props.status} level={3} />
       {props?.data?.map((task) => (
         <TaskCard key={task._id} {...task} />
       ))}

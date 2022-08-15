@@ -18,6 +18,7 @@
 
 .header-card-container > button {
   display: flex;
+  height: 20px;
   border-radius: var(--border-radius);
   border: none;
   background-color: var(--red);
