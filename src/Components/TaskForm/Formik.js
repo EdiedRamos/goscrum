@@ -17,7 +17,6 @@ const Formik = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.table(values);
       const task = {
         task: {
           ...values,
