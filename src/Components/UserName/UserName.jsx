@@ -6,7 +6,7 @@ const reduceName = (name) => {
 
 const UserName = () => {
   return (
-    <p className="user-name">{reduceName("Edied Isaías Ramos Hernández")}</p>
+    <p className="user-name">{reduceName(localStorage.getItem("userName"))}</p>
   );
 };
 

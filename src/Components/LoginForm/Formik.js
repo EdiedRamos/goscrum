@@ -25,7 +25,7 @@ const Formik = () => {
         if (status_code === 404) toast.error("Nombre de usuario no encontrado");
         else if (status_code === 401) toast.warn("Contraseña incorrecta");
         else if (status_code === 200) {
-          dispatch(loginAction(res.result.token));
+          dispatch(loginAction(res.result.token, values.userName));
           toast.success(`Bienvenido ${values.userName}`);
           navigate("/", { replace: true });
         }
