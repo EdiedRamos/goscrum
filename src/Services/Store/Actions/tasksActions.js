@@ -33,6 +33,7 @@ export const addTask = (task) => {
             task: res.result.task,
           },
         });
+        dispatch(search());
       }
     });
   };
@@ -48,6 +49,7 @@ export const removeTask = (taskId) => {
             taskId,
           },
         });
+        dispatch(search());
       }
     });
   };
