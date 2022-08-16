@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react";
 import { Label, Input } from "../";
 import "./TaskFilter.css";
 
 import { useDispatch } from "react-redux";
-import { searchByOwner } from "../../Services/Store/Actions/tasksActions";
+import { setOwner, search } from "../../Services/Store/Actions/tasksActions";
+import { useSelector } from "react-redux";
 
 const TaskFilter = () => {
-  const [allTasks, setAllTasks] = useState(true);
   const dispatch = useDispatch();
-  const handleChange = () => {
-    setAllTasks((prev) => !prev);
-  };
-  useEffect(() => {
-    dispatch(searchByOwner(!allTasks ? localStorage.getItem("userId") : false));
-  }, [allTasks]);
+  const owner = useSelector((store) => store.tasksReducer.owner);
   return (
     <div className="task-filter-container">
       <Input
         type="radio"
         name="radio-group"
         id="todas"
-        checked={allTasks}
-        change={handleChange}
+        checked={owner === "all"}
+        change={() => {
+          dispatch(setOwner("all"));
+          dispatch(search());
+        }}
       />
       <Label content="Todas" htmlFor="todas" />
       <Input
         type="radio"
         name="radio-group"
         id="mis-tareas"
-        change={handleChange}
+        change={() => {
+          dispatch(setOwner("me"));
+          dispatch(search());
+        }}
       />
       <Label content="Mis tareas" htmlFor="mis-tareas" />
     </div>

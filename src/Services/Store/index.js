@@ -3,8 +3,6 @@ import thunk from "redux-thunk";
 
 import { sesionReducer, tasksReducer } from "./Reducers/";
 
-import { getAllTasks } from "./Actions/tasksActions";
-
 const reducers = combineReducers({
   sesionReducer,
   tasksReducer,

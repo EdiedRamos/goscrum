@@ -4,8 +4,7 @@ import { Heading, TaskFilter, TaskSearch, TaskPriority, TaskList } from "../";
 import "./Tasks.css";
 
 const Tasks = () => {
-  const tasks = useSelector((store) => store.tasksReducer.list);
-
+  const tasks = useSelector((store) => store.tasksReducer.result);
   return (
     <div className="tasks-container">
       <Heading content="Mis tareas" level={3} />
